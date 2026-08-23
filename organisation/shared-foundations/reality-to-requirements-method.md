@@ -42,6 +42,8 @@ Operational Reality
 
 A bounded domain may move through this sequence when its own evidence and validation are sufficient. DCA does not need to complete the sequence organisation-wide before improving a specific domain.
 
+Likewise, an information-preservation or reconciliation workflow does not need to wait for the entire organisational model to be known. Once its relevant requirement is sufficiently established, the required support may move forward while broader reconstruction and validation continue.
+
 ## 1. Start from operational reality
 
 Begin with what is observed, reported, documented, validated, uncertain, variable, exceptional, or missing in current DCA work.
@@ -164,9 +166,13 @@ The target is **minimum useful preservation**, not maximum capture.
 
 The information requirement should remain meaningful even if the implementation tool changes.
 
-## 8. Derive system requirements only afterward
+When distributed evidence must be recovered, matched, reconciled, persisted, or exposed for reuse, apply the **DCA Reconstruction & Reconciliation Method** rather than inventing those rules inside a technical implementation.
 
-A technical requirement exists only when organisational or operational reality justifies technical support.
+## 8. Derive system support when the relevant requirement is sufficiently established
+
+**System support follows the relevant requirement once that requirement is sufficiently established.**
+
+DCA does not need to postpone a bounded technical response until every adjacent workflow or the whole organisation has been reconstructed. Equally, a tool or integration must not be introduced merely because it is available.
 
 Possible responses may include:
 
@@ -226,13 +232,34 @@ Operational Reality
 
 No downstream model is protected from correction by new evidence.
 
+## Relationship to Reconstruction & Reconciliation
+
+The two current shared methods have different responsibilities.
+
+```text
+STRUCTURE METHOD
+What does reality justify DCA needing?
+        ↓
+requirements / structure / information / system support
+
+RECONSTRUCTION & RECONCILIATION METHOD
+How does distributed operational evidence become
+reliable, reusable shared organisational information?
+```
+
+The Reconstruction & Reconciliation Method may supply or maintain the shared information on which structural reasoning depends. The Structure Method may in turn reveal new preservation, reconciliation, or retrieval requirements.
+
+They form a feedback relationship rather than a single organisation-wide waterfall.
+
 ## Authority and boundaries
 
 This document is the current DCA method for deriving structure and system support from organisational reality.
 
 It supersedes the earlier Structure Method insofar as that document required facts to be assigned through a predetermined sequence of fixed Layers, Entry Points, and Anchors before the current operational requirement had been established.
 
-This supersession does **not** mean that every concept, object, pilot, or implementation produced under the earlier model is invalid. Existing artifacts remain evidence or implementation history and must be evaluated on their own operational support and current status.
+It also supersedes **DCA Workflow-Based Structural Alignment Logic** as a separate active method. The useful workflow, dependency, consequence, function, requirement, testing, and feedback logic from that predecessor is incorporated here.
+
+This supersession does **not** mean that every concept, object, pilot, or implementation produced under earlier models is invalid. Existing artifacts remain evidence or implementation history and must be evaluated on their own operational support and current status.
 
 In particular:
 
@@ -246,11 +273,11 @@ In particular:
 
 - **DCA Operational Reality** supplies the evidence base.
 - **DCA Derived Organisational Reality** contains evidence-backed organisational inferences without defining the Operating Model.
-- **Workflow-based Structural Alignment** applies the method by making recurring work, dependencies, consequences, functions, and requirements visible.
+- **DCA Reconstruction & Reconciliation Method** governs how distributed evidence and live capture become reliable reusable shared organisational information.
 - **Domain plans and pilots** test bounded requirements through live work.
 - **DCA architecture specifications** formalise stable meaning once sufficiently justified.
 - **DCA Systems & Data** implements technical support where required.
-- **DCA AI** may apply this method but does not authorise organisational reality.
+- **DCA AI** may apply these methods but does not authorise organisational reality.
 
 ## Short rule
 
