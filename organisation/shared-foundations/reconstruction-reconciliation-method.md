@@ -2,16 +2,23 @@
 document_type: dca_reconstruction_reconciliation_method
 status: current
 scope: organisation-wide
-purpose: turn distributed operational evidence and live capture into reliable reusable shared organisational information
+purpose: turn distributed organisational and operational evidence plus live capture into reliable reusable shared organisational information
 ---
 
 # DCA Reconstruction & Reconciliation Method
 
 ## Purpose
 
-This method defines how DCA turns distributed operational evidence and live capture into reliable, reusable shared organisational information while preserving provenance, uncertainty, source authority, and validation boundaries.
+This method defines how DCA turns **distributed organisational and operational evidence**, plus live capture of new facts, into reliable, reusable shared organisational information while preserving provenance, uncertainty, source authority, and validation boundaries.
 
-It exists because important DCA reality is often distributed across people, conversations, documents, spreadsheets, operational platforms, email, historical records, and technical systems. Reuse requires more than collecting those sources: the underlying facts, identities, relationships, consequences, uncertainty, and provenance must be reconstructed and reconciled without silently inventing certainty.
+It exists because important DCA reality is often distributed across people, conversations, documents, repositories, spreadsheets, operational platforms, email, historical records, technical systems, runtime traces, and evidence of downstream use. Reuse requires more than collecting those sources: the underlying facts, identities, relationships, consequences, capability state, uncertainty, and provenance must be reconstructed and reconciled without silently inventing certainty.
+
+The method applies to both:
+
+- **Operational Reality** — what happens in DCA domain work;
+- **Capability Reality** — what an organisational capability actually does, maintains, changes, supports, depends on, and enables.
+
+See `capability-reality.md` for the capability evidence and monitoring boundary.
 
 ## Boundary with the Structure Method
 
@@ -19,78 +26,75 @@ The two methods answer different questions.
 
 ### DCA Structure Method — Reality to Requirements
 
-**What does current reality justify DCA needing?**
+**What does relevant current reality justify DCA needing?**
 
-It derives organisational, information, structural, and system requirements from operational reality.
+It derives organisational, information, structural, and system requirements from sufficiently established DCA reality.
 
 ### DCA Reconstruction & Reconciliation Method
 
-**How does DCA turn distributed operational evidence into reliable shared organisational information?**
+**How does DCA turn distributed organisational and operational evidence into reliable shared organisational information?**
 
-It governs reconstruction, matching, conflict handling, provenance, validation, persistence, consolidation, and reuse.
+It governs reconstruction, matching, conflict handling, provenance, validation, persistence, consolidation, monitoring, and reuse.
 
 Neither method replaces the other.
 
-A bounded information-preservation or reconciliation workflow may move forward as soon as its relevant requirement is sufficiently established. DCA does not need to reconstruct the whole organisation first.
+A bounded information-preservation, capability-monitoring, or reconciliation workflow may move forward as soon as its relevant requirement is sufficiently established. DCA does not need to reconstruct the whole organisation first.
 
 **System support follows the relevant requirement once that requirement is sufficiently established.**
 
 ## Core information loop
 
 ```text
-                     DCA OPERATIONAL REALITY
-                            │
-              ┌─────────────┴─────────────┐
-              │                           │
-              ▼                           ▼
-       RECONSTRUCTION                 LIVE CAPTURE
-       recover existing              record new facts
-       distributed reality           as work happens
-              │                           │
-              └──────────┬────────────────┘
-                         ▼
-                  RECONCILIATION
-              identity / matching
-              conflict / uncertainty
-              provenance / validation
-                         │
-                         ▼
-               SHARED OPERATIONAL RECORD
-                         │
-              ┌──────────┴──────────┐
-              ▼                     ▼
-        OPERATIONAL USE       SHARED REALITY
-        views / workflows     reconstruction
-              │                     │
-              └─────────┬───────────┘
-                        ▼
-                 RECHECK + LEARN
-                        │
-                        ▼
-               NEW OPERATIONAL REALITY
+EXISTING / DISTRIBUTED EVIDENCE       NEW WORK / CHANGE
+operational + capability sources      operational + capability activity
+              │                                  │
+              ▼                                  ▼
+       RECONSTRUCTION                       LIVE CAPTURE
+              │                                  │
+              └──────────────┬───────────────────┘
+                             ▼
+                       RECONCILIATION
+                    identity / matching
+                  conflict / uncertainty
+                  provenance / validation
+                             │
+                             ▼
+                SHARED ORGANISATIONAL INFORMATION
+                             │
+                 ┌───────────┴───────────┐
+                 ▼                       ▼
+          OPERATIONAL USE          CAPABILITY / SHARED
+          views / workflows        REALITY MAINTENANCE
+                 │                       │
+                 └───────────┬───────────┘
+                             ▼
+                       RECHECK + LEARN
+                             │
+                             ▼
+                         NEW EVIDENCE
 ```
 
-A shared operational record is not necessarily one database. It is the reliable organisation-held information that survives source fragmentation and can be retrieved and reused by the work that depends on it.
+Shared organisational information is not necessarily one database. It is reliable organisation-held information that survives source fragmentation and can be retrieved and reused by the work or capability that depends on it.
 
-## 1. Start with a bounded preservation need
+## 1. Start with a bounded preservation or monitoring need
 
-Do not begin by importing everything because a source exists or an API is available.
+Do not begin by importing or instrumenting everything because a source exists or an API is available.
 
 Ask:
 
-- What operational fact, relationship, event, decision, or consequence needs to remain usable?
-- Who needs it later and for what work?
-- What is lost today when it is not preserved?
+- What fact, relationship, event, decision, consequence, capability state, dependency, or failure needs to remain usable?
+- Who or what needs it later and for what work?
+- What is lost today when it is not preserved or monitored?
 - What minimum evidence is needed to support it?
 - What uncertainty or variation must remain visible?
 
-The target is **minimum useful preservation**, not maximum collection.
+The target is **minimum useful preservation and monitoring**, not maximum collection.
 
 ## 2. Identify and preserve source evidence
 
-Treat messages, documents, spreadsheets, platform records, exports, forms, photos, system records, and human reports as sources or representations of reality.
+Treat messages, documents, spreadsheets, platform records, exports, forms, photos, GitHub history, system/runtime traces, downstream-use evidence, and human reports as sources or representations of reality.
 
-Do not confuse the source with the fact it may support.
+Do not confuse the source with the fact or capability state it may support.
 
 Where useful, preserve:
 
@@ -102,26 +106,27 @@ Where useful, preserve:
 - source-specific status;
 - confidence or validation state.
 
-A platform field is not automatically the organisational truth of the same name.
+A platform field, document, commit, or system trace is not automatically the organisational truth of the same name.
 
 ## 3. Reconstruct what the evidence says
 
-Reconstruction recovers the operational meaning that is distributed across sources.
+Reconstruction recovers organisational or operational meaning that is distributed across sources.
 
 This may include:
 
-- identifying the person, organisation, partner, donation, activity, shipment, or other subject involved;
-- connecting related records or events;
+- identifying the person, organisation, partner, donation, activity, shipment, capability, or other subject involved;
+- connecting related records, events, artifacts, decisions, or changes;
 - recovering chronology;
-- preserving the consequence of a communication or decision;
+- preserving the consequence of a communication, decision, implementation, or failure;
 - identifying what is still unknown;
-- separating source-specific state from shared organisational meaning.
+- separating source-specific state from shared organisational meaning;
+- reconstructing what a capability actually does and maintains from observable evidence.
 
 Reconstruction must not silently fill missing information.
 
 ## 4. Reconcile identity and meaning
 
-Reconciliation determines when different pieces of evidence refer to the same underlying subject or organisational fact.
+Reconciliation determines when different pieces of evidence refer to the same underlying subject, organisational fact, capability state, or change.
 
 Possible work includes:
 
@@ -133,9 +138,10 @@ Possible work includes:
 - source-to-canonical mapping;
 - normalisation needed for comparison;
 - conflict detection;
-- distinguishing changed reality from inconsistent evidence.
+- distinguishing changed reality from inconsistent evidence;
+- connecting a system or architecture change to the maintained capability it actually affects.
 
-A candidate match is not a confirmed identity merely because it looks plausible.
+A candidate match or interpretation is not confirmed merely because it looks plausible.
 
 ## 5. Preserve conflict, uncertainty, and source differences
 
@@ -150,7 +156,9 @@ Keep visible where relevant:
 - missing evidence;
 - platform-specific status;
 - historical versus current value;
-- direct fact versus derived interpretation.
+- direct fact versus derived interpretation;
+- intended capability versus evidenced capability;
+- implementation activity versus demonstrated use or outcome.
 
 Absence of evidence is not evidence of absence.
 
@@ -158,7 +166,7 @@ Normalisation should make comparison possible without erasing meaningful source 
 
 ## 6. Validate only at the required boundary
 
-Not every field requires manual confirmation, and not every AI-assisted match requires the same validation.
+Not every field, capability claim, or AI-assisted match requires the same validation.
 
 Define what may be:
 
@@ -173,7 +181,7 @@ Validation should be proportional to the consequence of being wrong.
 
 ## 7. Persist the reconciled result with provenance
 
-Once sufficiently supported, persist the reusable shared result in the appropriate organisation-held record or system.
+Once sufficiently supported, persist the reusable shared result in the appropriate organisation-held record, document, architecture source, or system.
 
 Preserve enough provenance that DCA can later understand:
 
@@ -186,23 +194,24 @@ Preserve enough provenance that DCA can later understand:
 
 Persistence does not mean deleting historical evidence or flattening all sources into one record.
 
-## 8. Consolidate operational consequences
+## 8. Consolidate justified consequences
 
-A new activity, message, platform event, or corrected identity may affect other organisation-held records.
+New activity, evidence, corrected identity, capability change, system event, or architecture change may affect connected organisation-held information.
 
-Where justified, consolidation applies those consequences so that connected work remains coherent.
+Where justified, consolidation applies those consequences so connected work remains coherent.
 
 Examples may include:
 
 - updating an outreach cycle after a real interaction;
 - linking a donation to the correct contact or organisation;
-- applying a durable do-not-contact consequence;
+- applying a durable contactability consequence;
 - connecting a partner fact to the organisation that operational work retrieves later;
+- updating current S&S capability reality after a verified architecture or system change;
 - creating a review item when a consequence cannot be applied safely.
 
 Consolidation must remain auditable and must not invent downstream consequences that the evidence does not support.
 
-## 9. Expose the shared information for operational use
+## 9. Expose shared information for use
 
 Shared information is valuable when the people and workflows that need it can actually retrieve and use it.
 
@@ -214,38 +223,63 @@ Possible retrieval surfaces include:
 - AI-assisted retrieval;
 - Slack-linked views;
 - workflow inputs;
-- communication and reporting inputs.
+- communication and reporting inputs;
+- capability-health or handover views.
 
 The retrieval surface is replaceable. The underlying organisational meaning and provenance should remain intelligible independently of the tool.
 
-## 10. Recheck and learn
+## 10. Monitor material capability change where needed
 
-New evidence may confirm, correct, split, merge, or invalidate an earlier reconciliation.
+Where a capability needs to remain reconstructable over time, repeated reconstruction should evolve into proportionate monitoring.
+
+For System & Structure, monitoring may compare:
+
+- current Google Drive artifacts/routing against current authority;
+- GitHub architecture and AI specifications against organisation-facing guidance;
+- Slack validation/alignment evidence against maintained reality;
+- Airtable/system state against documented requirements;
+- automation/integration outcomes against intended behaviour;
+- downstream use against claims that a capability is functioning.
+
+Monitor **material change**, not every action.
+
+Surface a finding when evidence suggests a new or changed capability, authority drift, stale documentation, system/document mismatch, unresolved dependency, automation failure, key-person continuity risk, repeated reconstruction, or an output that is produced but not actually used.
+
+## 11. Recheck and learn
+
+New evidence may confirm, correct, split, merge, or invalidate an earlier reconciliation or capability interpretation.
 
 Reconciliation is therefore not a one-time cleanup exercise.
 
 ```text
 Capture / Reconstruction
 → Reconciliation
-→ Shared Record
-→ Operational Use
+→ Shared Information
+→ Operational / Capability Use
 → New Evidence
 → Recheck
 ```
 
-Where a repeated reconciliation problem reveals a missing organisational or information requirement, feed that finding into the DCA Structure Method.
+Where a repeated reconciliation or monitoring problem reveals a missing organisational or information requirement, feed that finding into the DCA Structure Method.
 
 ## Critical distinctions
 
 Keep these distinctions explicit:
 
 - source record ≠ operational fact;
+- artifact created ≠ organisational adoption;
+- GitHub commit ≠ organisational decision unless current authority supports it;
+- Slack discussion ≠ validated organisational fact automatically;
+- technical implementation ≠ organisational structure;
+- tool presence ≠ demonstrated capability;
+- activity ≠ successful outcome;
+- intended mandate ≠ current capability reality;
 - duplicate candidate ≠ confirmed same entity;
 - platform status ≠ organisational relationship status;
 - reconstruction ≠ invention;
 - reconciliation ≠ forced certainty;
 - reconciled ≠ manually validated in every case;
-- clean data ≠ complete operational reality;
+- clean data ≠ complete organisational reality;
 - shared operational record ≠ final Operating Model;
 - technical canonical record ≠ authority over upstream reality;
 - AI-supported match ≠ organisational fact unless its validation boundary is satisfied.
@@ -258,25 +292,27 @@ The method is implementation-independent. Current DCA systems already contain wo
 
 Current examples include organisation/contact identity, relationship records, outreach activities and cycles, contact intake, review queues, source references, validation state, cleanup logs, and consolidation markers.
 
-Its role is not defined by Airtable itself. It currently implements parts of the shared relationship, activity, review, and operational-use layer.
-
 ### `DCA Integrations & Reconciliation`
 
 Current examples include platform-source staging, sync-run tracking, Donorbox source records, Mailchimp source records, and integration review queues.
 
-It currently implements parts of platform ingestion, staging, matching, reconciliation, and review.
+### System & Structure Capability Reality
+
+Relevant observable evidence may include Google Drive artifacts/revisions, GitHub commits/ADRs/specifications, Slack alignment/validation/correction evidence, Airtable/system state, automation/runtime evidence, and downstream use of S&S outputs.
+
+These are evidence surfaces, not automatic organisational authority.
 
 ### Other DCA sources
 
-Google Workspace, Gmail, Slack, WhatsApp, spreadsheets, platform exports, operational documents, and human input may all provide evidence or live capture.
+Google Workspace, Gmail, Slack, WhatsApp, GitHub, spreadsheets, platform exports, operational documents, system/runtime traces, downstream-use evidence, and human input may all provide evidence or live capture.
 
 They do not become canonical organisational truth merely because they are the source.
 
 ### DCA AI
 
-AI may support extraction, comparison, matching, classification, review preparation, consolidation checks, and retrieval.
+AI may support extraction, comparison, matching, classification, review preparation, consolidation checks, retrieval, and capability monitoring.
 
-AI must preserve source authority and uncertainty and must not silently resolve identity, conflict, or organisational meaning beyond the permitted validation boundary.
+AI must preserve source authority and uncertainty and must not silently resolve identity, conflict, adoption, outcome, or organisational meaning beyond the permitted validation boundary.
 
 ## What this method does not do
 
@@ -288,10 +324,11 @@ This method does not:
 - redesign existing Airtable bases merely because this method exists;
 - require organisation-wide reconstruction before bounded reconciliation can proceed;
 - make every source field a shared organisational field;
-- make every repeated data-cleanup step a permanent procedure.
+- make every repeated data-cleanup or monitoring step a permanent procedure;
+- treat all observable activity as meaningful capability evidence.
 
 ## Short rule
 
-When DCA information is distributed or inconsistent:
+When DCA information or capability reality is distributed or inconsistent:
 
-**Preserve the evidence, reconstruct the underlying reality, reconcile only what the evidence supports, keep uncertainty visible, persist the reusable result with provenance, and recheck it when new reality appears.**
+**Preserve the evidence and what kind of evidence it is, reconstruct the underlying organisational or operational reality, reconcile only what the evidence supports, keep uncertainty visible, persist the reusable result with provenance, and recheck it when new reality appears.**
