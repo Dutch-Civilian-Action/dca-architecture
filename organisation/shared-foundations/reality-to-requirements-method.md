@@ -16,7 +16,7 @@ does_not_define:
 
 ## Purpose
 
-This method defines how DCA moves from observed organisational reality toward justified structural, information, and system responses.
+This method defines how DCA moves from **relevant current DCA reality** toward justified structural, information, and system responses.
 
 It exists to prevent DCA from designing structure, procedures, roles, data models, or technical objects before the reality they are meant to support is sufficiently understood.
 
@@ -26,40 +26,59 @@ The governing rule is:
 
 This method does not define the final DCA Operating Model. It defines the discipline used to discover what DCA may actually need.
 
+## Relevant current reality
+
+The method may begin from:
+
+- **Operational Reality** — what happens in DCA domain work;
+- **Capability Reality** — what an organisational capability actually does, maintains, changes, supports, depends on, and enables;
+- both, where the question crosses the boundary.
+
+Capability Reality must be evidence-backed. Intended mandate, role descriptions, artifact presence, implementation activity, or tool ownership do not by themselves establish current capability reality.
+
+See `capability-reality.md` for the evidence and monitoring boundary.
+
 ## Core sequence
 
 ```text
-Operational Reality
+Relevant DCA evidence
+→ Operational Reality and/or Capability Reality
 → Shared Organisational Reality
-→ Recurring Workflows
+→ Recurring Workflows / Capability Patterns
 → Organisational Requirements
 → Structure + Information Requirements, where justified
 → System Requirements, where justified
 → System Support
-→ Live Operational Use
-→ New Operational Reality
+→ Live Operational Use / Maintained Capability
+→ New Evidence
+→ Updated Reality
 ```
 
-A bounded domain may move through this sequence when its own evidence and validation are sufficient. DCA does not need to complete the sequence organisation-wide before improving a specific domain.
+A bounded domain or capability may move through this sequence when its own evidence and validation are sufficient. DCA does not need to complete the sequence organisation-wide before improving a specific area.
 
 Likewise, an information-preservation or reconciliation workflow does not need to wait for the entire organisational model to be known. Once its relevant requirement is sufficiently established, the required support may move forward while broader reconstruction and validation continue.
 
-## 1. Start from operational reality
+## 1. Start from relevant current reality
 
-Begin with what is observed, reported, documented, validated, uncertain, variable, exceptional, or missing in current DCA work.
+Begin with the evidence relevant to the question.
+
+For domain work, use evidence of what actually happens: observed and reported work, variation, exceptions, uncertainty, visibility gaps, and current dependencies.
+
+For an organisational capability, use evidence of what the capability actually does and maintains: artifacts and revisions, decisions, repositories, system state, runtime behaviour, dependencies, maintenance work, failures, and downstream use where relevant.
 
 Preserve distinctions between:
 
 - direct operational evidence;
+- capability evidence;
 - validated shared reality;
 - derived interpretation;
 - uncertainty or visibility gaps;
 - pilot-introduced practice;
 - proposed future practice.
 
-Do not silently treat a proposal, pilot, technical implementation, or historical document as current organisational reality.
+Do not silently treat a proposal, pilot, technical implementation, historical document, intended mandate, artifact presence, or activity volume as current organisational reality.
 
-## 2. Reconstruct recurring workflows
+## 2. Reconstruct recurring workflows and capability patterns
 
 Connect validated observations into the work that repeatedly happens.
 
@@ -75,6 +94,7 @@ Ask:
 - What varies?
 - What is exceptional?
 - Where does visibility or context break?
+- For a capability: what is maintained, monitored, corrected, or handed over repeatedly?
 
 A reconstructed workflow describes recurring reality. It is not automatically a procedure.
 
@@ -82,7 +102,7 @@ A reconstructed workflow describes recurring reality. It is not automatically a 
 
 ## 3. Identify dependencies and consequences
 
-For each part of the workflow, make visible what it creates for:
+For each part of the workflow or maintained capability, make visible what it creates for:
 
 1. the person or function doing the work;
 2. the next person or function;
@@ -92,11 +112,11 @@ Relevant consequences may include continuity, time, rework, handoff quality, rel
 
 ## 4. Derive recurring functions where evidence supports them
 
-Recurring workflows may reveal recurring organisational capabilities or functions.
+Recurring workflows or maintained capability reality may reveal recurring organisational capabilities or functions.
 
 A function should not be introduced because it sounds appropriate for an NGO or because an earlier model declared it.
 
-It should be identified when repeated operational reality demonstrates that DCA must reliably perform a capability.
+It should be identified when repeated, sufficiently established DCA reality demonstrates that DCA must reliably perform or maintain a capability.
 
 Keep the distinction explicit:
 
@@ -110,7 +130,7 @@ No final set of essential DCA functions is fixed by this method.
 
 ## 5. Derive organisational requirements
 
-Once a recurring workflow or function is sufficiently visible, ask what DCA must reliably be able to do, know, preserve, hand over, retrieve, or continue.
+Once a recurring workflow, function, or maintained capability is sufficiently visible, ask what DCA must reliably be able to do, know, preserve, hand over, retrieve, monitor, or continue.
 
 For each requirement, keep explicit where relevant:
 
@@ -148,7 +168,7 @@ Structure is a response to reality, not the starting assumption.
 
 ## 7. Derive information requirements
 
-Ask what must remain knowable and reusable for the workflow to continue without unnecessary reconstruction.
+Ask what must remain knowable and reusable for the workflow or capability to continue without unnecessary reconstruction.
 
 Examples include:
 
@@ -160,6 +180,7 @@ Examples include:
 - handoff context;
 - uncertainty;
 - operational outcome;
+- capability state;
 - evidence required by downstream work.
 
 The target is **minimum useful preservation**, not maximum capture.
@@ -174,31 +195,17 @@ When distributed evidence must be recovered, matched, reconciled, persisted, or 
 
 DCA does not need to postpone a bounded technical response until every adjacent workflow or the whole organisation has been reconstructed. Equally, a tool or integration must not be introduced merely because it is available.
 
-Possible responses may include:
-
-- Airtable;
-- Google Drive;
-- Slack;
-- forms;
-- APIs;
-- integrations;
-- AI extraction or reconciliation;
-- notifications;
-- labels;
-- automation;
-- reporting infrastructure;
-- another tool;
-- no new system at all.
+Possible responses may include Airtable, Google Drive, Slack, forms, APIs, integrations, AI extraction or reconciliation, notifications, labels, automation, reporting infrastructure, monitoring, another tool, or no new system at all.
 
 **Organisational requirement ≠ technical implementation.**
 
 Tool capability does not define the organisational model.
 
-## 9. Test through live operational use
+## 9. Test through live use and capability maintenance
 
 A proposed response is not correct merely because it is internally coherent or technically functional.
 
-Test it in real bounded work.
+Test it in real bounded work or through the real maintenance of the capability it supports.
 
 Evaluate whether it:
 
@@ -209,25 +216,25 @@ Evaluate whether it:
 - remains usable under real variation and exceptions;
 - creates less burden than the reconstruction it replaces;
 - preserves uncertainty rather than hiding it;
-- improves organisational visibility or continuity where intended.
+- improves organisational visibility or continuity where intended;
+- remains current and transferable over time.
 
-Success is not that a tool works. Success is that the relevant operational reality becomes more understandable, transferable, and reusable.
+Success is not that a tool works. Success is that the relevant DCA reality becomes more understandable, transferable, reusable, and maintainable.
 
 ## 10. Feed new evidence back into shared reality
 
-Live work creates new evidence.
+Live work and maintained organisational capabilities create new evidence.
 
-That evidence may confirm, qualify, contradict, or invalidate the reconstructed workflow, derived requirement, structural response, or system support.
-
-The loop is therefore:
+That evidence may confirm, qualify, contradict, or invalidate the reconstructed workflow, capability interpretation, derived requirement, structural response, or system support.
 
 ```text
-Operational Reality
-→ Workflow
+Current Reality
+→ Workflow / Capability
 → Requirements
 → Response
-→ Live Use
-→ New Operational Reality
+→ Live Use / Maintained Capability
+→ New Evidence
+→ Updated Reality
 ```
 
 No downstream model is protected from correction by new evidence.
@@ -238,16 +245,16 @@ The two current shared methods have different responsibilities.
 
 ```text
 STRUCTURE METHOD
-What does reality justify DCA needing?
+What does relevant current reality justify DCA needing?
         ↓
 requirements / structure / information / system support
 
 RECONSTRUCTION & RECONCILIATION METHOD
-How does distributed operational evidence become
+How does distributed organisational and operational evidence become
 reliable, reusable shared organisational information?
 ```
 
-The Reconstruction & Reconciliation Method may supply or maintain the shared information on which structural reasoning depends. The Structure Method may in turn reveal new preservation, reconciliation, or retrieval requirements.
+The Reconstruction & Reconciliation Method may supply or maintain the shared information on which structural reasoning depends. The Structure Method may in turn reveal new preservation, reconciliation, retrieval, or monitoring requirements.
 
 They form a feedback relationship rather than a single organisation-wide waterfall.
 
@@ -255,11 +262,11 @@ They form a feedback relationship rather than a single organisation-wide waterfa
 
 This document is the current DCA method for deriving structure and system support from organisational reality.
 
-It supersedes the earlier Structure Method insofar as that document required facts to be assigned through a predetermined sequence of fixed Layers, Entry Points, and Anchors before the current operational requirement had been established.
+It supersedes the earlier Structure Method insofar as that document required facts to be assigned through a predetermined sequence of fixed Layers, Entry Points, and Anchors before the current requirement had been established.
 
 It also supersedes **DCA Workflow-Based Structural Alignment Logic** as a separate active method. The useful workflow, dependency, consequence, function, requirement, testing, and feedback logic from that predecessor is incorporated here.
 
-This supersession does **not** mean that every concept, object, pilot, or implementation produced under earlier models is invalid. Existing artifacts remain evidence or implementation history and must be evaluated on their own operational support and current status.
+This supersession does **not** mean that every concept, object, pilot, or implementation produced under earlier models is invalid. Existing artifacts remain evidence or implementation history and must be evaluated on their own support and current status.
 
 In particular:
 
@@ -271,9 +278,10 @@ In particular:
 
 ## Relationship to other DCA sources
 
-- **DCA Operational Reality** supplies the evidence base.
+- **DCA Operational Reality** supplies the current domain-operational evidence base.
+- **System & Structure Capability Reality** supplies evidence-backed understanding of what the S&S capability actually does and maintains.
 - **DCA Derived Organisational Reality** contains evidence-backed organisational inferences without defining the Operating Model.
-- **DCA Reconstruction & Reconciliation Method** governs how distributed evidence and live capture become reliable reusable shared organisational information.
+- **DCA Reconstruction & Reconciliation Method** governs how distributed organisational and operational evidence and live capture become reliable reusable shared organisational information.
 - **Domain plans and pilots** test bounded requirements through live work.
 - **DCA architecture specifications** formalise stable meaning once sufficiently justified.
 - **DCA Systems & Data** implements technical support where required.
@@ -287,4 +295,4 @@ When something in DCA is structurally unclear:
 
 Ask first:
 
-**What does the current reality show, what repeatedly needs to happen, and what must DCA therefore be able to preserve or perform?**
+**What does the relevant current reality show, what repeatedly needs to happen or be maintained, and what must DCA therefore be able to preserve or perform?**
