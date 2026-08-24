@@ -171,7 +171,7 @@ Their technical schemas remain implementation. Their organisational meaning must
 
 ## Legacy AI material
 
-Nested June 2026 `dca-ai/dca-ai/` skills are **LEGACY / PENDING AUDIT** and must not be treated as current organisational authority.
+Historical pre-reality-first DCA AI skills are preserved under `dca-ai/skills/legacy/` in the `dca-ai` repository. They are **LEGACY** and must not be loaded or treated as current DCA AI capability definitions.
 
 DCA System Builder v2 — Gem Instructions is a **LEGACY / SUPERSEDED AI INSTRUCTION SOURCE** where it requires the old Operating Model and fixed layers/anchors to remain highest authority.
 
