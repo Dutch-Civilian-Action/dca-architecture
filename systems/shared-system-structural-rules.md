@@ -234,6 +234,58 @@ The architecture remains authoritative when an implementation changes.
 
 Implementation-specific standards may define details such as data types, formulas, primary fields, linked-record behaviour, API mappings, runtime permissions, or extension behaviour, but they must remain subordinate to these structural rules.
 
+## 16. Involvement and context before shared abstraction
+
+A person or organisation may participate in multiple areas and may have different roles, preferences, status, availability, activities, contact choices, or other context in each area.
+
+Do not treat information as globally shared merely because a similar property appears in more than one area.
+
+When deciding whether information belongs on a shared object or in a contextual relationship:
+
+- start from the real area of involvement and relationship context;
+- preserve area-specific and relationship-specific meaning;
+- avoid flattening contextual information into a generic contact or CRM record;
+- reference shared identity or contact information where it is genuinely shared rather than duplicating it;
+- extract a shared structure only when the meaning remains stable across the contexts in which it is used.
+
+For example, a concept such as a “primary” contact route has no stable global meaning unless the scope of “primary” is established. A person may legitimately have one preferred route in one relationship and another in a different relationship.
+
+Hard rule: model involvement and context first. Extract shared structure only when it is proven to be shared.
+
+This rule does not itself define canonical area tables, relationship tables, route models, preference models, or a final CRM schema. Those structures must be derived from sufficiently established requirements.
+
+## 17. Communication must preserve language context where it matters
+
+Human communication can depend materially on language. Where language affects interpretation, routing, preference, translation, or the meaning of a communication record, that language context must remain explicit.
+
+Different language facts must not be collapsed. Depending on the real information requirement, relevant distinctions may include:
+
+- the language of a specific communication;
+- a preferred language within a particular relationship or involvement context;
+- the language of the original source evidence.
+
+A preferred language must not automatically become a global property of a person when the preference is contextual.
+
+Implementation-specific schemas may choose the appropriate representation, but they must not discard language information that is required to understand or correctly handle communication.
+
+## 18. External-system data is evidence until reconciled
+
+Information received from third-party services, integrations, imports, syncs, APIs, or other external platforms must not automatically overwrite DCA canonical information merely because it is newer or successfully synchronized.
+
+Where external data can update or challenge shared information, the system must preserve the distinction between:
+
+- the value supplied by the external source;
+- the identity of that source;
+- synchronization state;
+- reconciliation or resolution state;
+- the DCA-resolved value where one has been established.
+
+Do not assume implicit last-write-wins behaviour across services.
+
+Conflicting external values remain evidence to be reconciled according to the applicable object and workflow rules. Synchronization success does not mean semantic resolution, validation, or canonical promotion.
+
+This rule does not require one field per service or prescribe one universal reconciliation object. The implementation structure must follow the actual services, conflict patterns, provenance needs, and reconciliation behaviour being supported.
+
 ## Implementation relationship
 
 This document is the platform-independent structural authority for shared-system representation.
