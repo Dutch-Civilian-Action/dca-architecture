@@ -12,7 +12,7 @@ Current shared foundations include:
 - `reality-to-requirements-method.md` — how DCA moves from relevant current reality toward justified organisational, information, structural, and system responses without imposing structure prematurely.
 - `reconstruction-reconciliation-method.md` — how DCA turns distributed organisational and operational evidence, plus live capture, into reliable reusable shared organisational information while preserving provenance, uncertainty, and validation boundaries.
 - `evidence-validation-to-live-use-loop.md` — the practical recurring loop after evidence or validation: preserve, reconstruct, validate, classify, route to the correct organisational home, implement only what is justified, test in live work, and feed new evidence back into the system.
-- `shared-object-boundaries.md` — minimum organisation-wide distinctions between people, organisations, locations, contact routes, operational functions, relationships, and operational facts that systems and AI must preserve across domains.
+- `shared-object-boundaries.md` — minimum organisation-wide distinctions between people, organisations, locations, contact routes, operational functions, relationships, and operational assertions/states that systems and AI must preserve across domains.
 - `authority-map.md` — how current reality, working sources, architecture, archived implementation, superseded structure, and legacy AI material relate in authority.
 
 The methods have different boundaries:
