@@ -33,7 +33,7 @@ Keep these meanings distinct whenever the evidence supports the distinction:
 - **contact route** — a phone number, WhatsApp number, email address, handle, or other route through which someone can be reached;
 - **operational function / step** — what a person, organisation, location, or route is doing in a specific piece of work;
 - **relationship** — an evidenced connection between otherwise distinct people, organisations, or DCA;
-- **operational fact / state** — a time-bounded fact about the work, goods, activity, decision, or current situation.
+- **operational assertion / state** — what is reported or established about the work at a point in time; it may change or be superseded without changing the identity of the people, organisations, locations, routes, functions, or relationships it describes.
 
 Association does not change object type.
 
@@ -43,7 +43,8 @@ Examples:
 - an organisation using a handover point remains an organisation, while the handover point remains a location;
 - a phone number used by a person remains a route, not the person itself;
 - a Logistics role performed in one case does not turn the person or organisation into that role;
-- a location used for pickup, unloading, temporary holding, or handover does not become the organisation's general address unless evidence establishes that separately.
+- a location used for pickup, unloading, temporary holding, or handover does not become the organisation's general address unless evidence establishes that separately;
+- a later operational update may supersede an earlier assertion without replacing the identity of the entities involved.
 
 ## Mixed evidence
 
@@ -52,17 +53,17 @@ One source item may support several objects and several links between them.
 For example:
 
 ```text
-"Harry at Azzurro says the boxes are ready. Handover is at Gate B."
+"Nora at Example Organisation says the boxes are ready. Handover is at Transfer Point B."
 ```
 
 may support, without collapsing them:
 
-- Harry — person;
-- Azzurro — organisation;
-- Gate B — location;
-- Harry ↔ Azzurro — contextual association where supported;
-- Gate B — handover function for this operational case;
-- the boxes / their state — operational fact.
+- Nora — person;
+- Example Organisation — organisation;
+- Transfer Point B — location;
+- Nora ↔ Example Organisation — contextual association where supported;
+- Transfer Point B — handover function for this operational case;
+- the boxes / their reported state — operational assertion.
 
 Preserve the shared evidence/provenance connecting those objects rather than representing the sentence as one combined entity.
 
