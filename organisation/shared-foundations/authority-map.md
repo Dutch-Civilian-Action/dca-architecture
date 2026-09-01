@@ -55,6 +55,16 @@ Role: defines how DCA turns distributed organisational and operational evidence,
 
 Authority boundary: it does not define the Operating Model, a universal central database, or a permanent platform schema. It governs the information-reliability process, not the final organisational structure.
 
+Provider-independent execution contract for established findings:
+
+`Dutch-Civilian-Action/dca-ai/workflows/reconcile-established-findings-into-maintained-reality.md`
+
+Status: **CURRENT**
+
+Role: after source-first reconstruction, self-evaluation, and required validation, compare each established current candidate with its authoritative maintained target; classify the reconciliation outcome; route, persist, and verify any justified change; and preserve the downstream result in the reconstruction lineage.
+
+This workflow implements the shared method. It does not outrank the maintained target or create write authority by itself.
+
 The current questions are different:
 
 - Capability Reality: **What does this organisational capability actually do and maintain, based on evidence?**
@@ -194,7 +204,9 @@ When sources disagree, apply these rules:
 13. **Current architecture may constrain interpretation, but it cannot manufacture operational or capability facts.**
 14. **A discovered pattern does not become a structural decision merely because it is coherent.**
 15. **System support follows the relevant requirement once that requirement is sufficiently established.**
-16. **Reality authorises the model.**
+16. **Validation does not equal maintained-state change; compare, classify, persist, and verify the outcome.**
+17. **A completed task, generated draft, or publication is not evidence that a maintained target was updated.**
+18. **Reality authorises the model.**
 
 ## Short current authority chain
 
