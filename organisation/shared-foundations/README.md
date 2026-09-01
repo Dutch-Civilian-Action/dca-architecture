@@ -10,7 +10,7 @@ Current shared foundations include:
 
 - `capability-reality.md` — distinguishes Operational Reality from Capability Reality and defines the evidence and monitoring boundary for organisational capabilities.
 - `reality-to-requirements-method.md` — how DCA moves from relevant current reality toward justified organisational, information, structural, and system responses without imposing structure prematurely.
-- `reconstruction-reconciliation-method.md` — how DCA turns distributed organisational and operational evidence, plus live capture, into reliable reusable shared organisational information while preserving provenance, uncertainty, and validation boundaries.
+- `reconstruction-reconciliation-method.md` — how DCA turns distributed organisational and operational evidence, plus live capture, into reliable reusable shared organisational information while preserving provenance, uncertainty, validation boundaries, and the required maintained-reality reconciliation handoff for established current findings.
 - `evidence-validation-to-live-use-loop.md` — the practical recurring loop after evidence or validation: preserve, reconstruct, validate, classify, route to the correct organisational home, implement only what is justified, test in live work, and feed new evidence back into the system.
 - `shared-object-boundaries.md` — minimum organisation-wide distinctions between people, organisations, locations, contact routes, operational functions, relationships, and operational assertions/states that systems and AI must preserve across domains.
 - `authority-map.md` — how current reality, working sources, architecture, archived implementation, superseded structure, and legacy AI material relate in authority.
@@ -19,7 +19,7 @@ The methods have different boundaries:
 
 - **Capability Reality:** what does an organisational capability actually do and maintain, based on evidence?
 - **Reality to Requirements:** what does relevant current reality justify DCA needing?
-- **Reconstruction & Reconciliation:** how does distributed evidence become reliable shared organisational information?
+- **Reconstruction & Reconciliation:** how does distributed evidence become reliable shared organisational information, and how is an established current result compared, routed, persisted, and verified against maintained reality?
 - **Evidence → Validation → Live Use:** once real evidence has been captured or validated, what happens next, where does each result belong, and how does it return to live work?
 - **Shared Object Boundaries:** which basic kinds of organisational/operational things must stay distinct even when one source or workflow mentions them together?
 
