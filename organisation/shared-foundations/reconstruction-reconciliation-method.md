@@ -59,6 +59,10 @@ operational + capability sources      operational + capability activity
                   provenance / validation
                              │
                              ▼
+              MAINTAINED-REALITY RECONCILIATION
+               compare / classify / route / verify
+                             │
+                             ▼
                 SHARED ORGANISATIONAL INFORMATION
                              │
                  ┌───────────┴───────────┐
@@ -179,7 +183,44 @@ Define what may be:
 
 Validation should be proportional to the consequence of being wrong.
 
-## 7. Persist the reconciled result with provenance
+## 7. Reconcile sufficiently established current findings with maintained reality
+
+Validation establishes what the evidence supports. It does not by itself establish whether the result is new, already represented, contradictory, historical only, proposed future state, or owned by another organisational destination.
+
+For every sufficiently established finding that may affect current shared reality:
+
+1. resolve the current authoritative target and its revision;
+2. compare the finding atomically with what that target already represents;
+3. classify the reconciliation outcome;
+4. route the finding to the correct organisational home;
+5. make only the smallest supported change;
+6. persist and re-read or otherwise verify the target;
+7. record the outcome, target, revision, actor, time, provenance, and remaining uncertainty.
+
+Use this controlled outcome vocabulary:
+
+- `already_represented` — the maintained target already contains the same material meaning;
+- `confirmation_only` — new evidence strengthens an existing maintained claim without requiring a text change;
+- `addition` — established current meaning is absent and must be added;
+- `correction` — established evidence changes maintained meaning;
+- `qualification` — maintained meaning remains valid only with a boundary, variation, or exception;
+- `conflict_unresolved` — sources still conflict and no supported write may pretend the conflict is settled;
+- `historical_only` — the finding belongs in historical lineage, not current maintained reality;
+- `proposed_future` — the finding describes intention, proposal, or expected future state rather than current reality;
+- `alternate_destination` — the finding is established but belongs somewhere other than the candidate maintained target;
+- `not_ready` — evidence, validation, authority, or target rules are insufficient.
+
+A routing recommendation is not write authority. The target's own identity, validation, naming, and write rules continue to apply.
+
+A source review or validation thread may close immediately when the outcome is a verified no-change result such as `already_represented` or `confirmation_only`. A change-bearing thread closes only after the supported change has been persisted and verified. A `conflict_unresolved` or `not_ready` case remains open or is transferred to an explicit validation/reconciliation item.
+
+The provider-independent implementation contract is:
+
+`Dutch-Civilian-Action/dca-ai/workflows/reconcile-established-findings-into-maintained-reality.md`
+
+Both full historical reconstruction and incremental reality maintenance must use that same handoff. Historical reconstruction performs it only after source-first reconstruction, self-evaluation, and required human validation; it must not read current maintained reality early in a way that biases reconstruction.
+
+## 8. Persist the reconciled result with provenance
 
 Once sufficiently supported, persist the reusable shared result in the appropriate organisation-held record, document, architecture source, or system.
 
@@ -194,7 +235,7 @@ Preserve enough provenance that DCA can later understand:
 
 Persistence does not mean deleting historical evidence or flattening all sources into one record.
 
-## 8. Consolidate justified consequences
+## 9. Consolidate justified consequences
 
 New activity, evidence, corrected identity, capability change, system event, or architecture change may affect connected organisation-held information.
 
@@ -211,7 +252,7 @@ Examples may include:
 
 Consolidation must remain auditable and must not invent downstream consequences that the evidence does not support.
 
-## 9. Expose shared information for use
+## 10. Expose shared information for use
 
 Shared information is valuable when the people and workflows that need it can actually retrieve and use it.
 
@@ -228,7 +269,7 @@ Possible retrieval surfaces include:
 
 The retrieval surface is replaceable. The underlying organisational meaning and provenance should remain intelligible independently of the tool.
 
-## 10. Monitor material capability change where needed
+## 11. Monitor material capability change where needed
 
 Where a capability needs to remain reconstructable over time, repeated reconstruction should evolve into proportionate monitoring.
 
@@ -245,7 +286,7 @@ Monitor **material change**, not every action.
 
 Surface a finding when evidence suggests a new or changed capability, authority drift, stale documentation, system/document mismatch, unresolved dependency, automation failure, key-person continuity risk, repeated reconstruction, or an output that is produced but not actually used.
 
-## 11. Recheck and learn
+## 12. Recheck and learn
 
 New evidence may confirm, correct, split, merge, or invalidate an earlier reconciliation or capability interpretation.
 
@@ -254,6 +295,7 @@ Reconciliation is therefore not a one-time cleanup exercise.
 ```text
 Capture / Reconstruction
 → Reconciliation
+→ Maintained-Reality Reconciliation
 → Shared Information
 → Operational / Capability Use
 → New Evidence
@@ -294,7 +336,9 @@ Current examples include organisation/contact identity, relationship records, ou
 
 ### `DCA Integrations & Reconciliation`
 
-Current examples include platform-source staging, sync-run tracking, Donorbox source records, Mailchimp source records, and integration review queues.
+Current examples include platform-source staging, sync-run tracking, Donorbox source records, Mailchimp source records, integration review queues, historical Reconstruction Objects, human-validation state, destination routing, maintained-reality comparison outcomes, target references/revisions, and persistence verification.
+
+The reconstruction staging layer records what was established and what happened downstream; it does not become a second canonical truth source.
 
 ### System & Structure Capability Reality
 
@@ -313,6 +357,8 @@ They do not become canonical organisational truth merely because they are the so
 AI may support extraction, comparison, matching, classification, review preparation, consolidation checks, retrieval, and capability monitoring.
 
 AI must preserve source authority and uncertainty and must not silently resolve identity, conflict, adoption, outcome, or organisational meaning beyond the permitted validation boundary.
+
+AI may execute the provider-independent maintained-reality reconciliation handoff, but completion requires a recorded comparison outcome and verified persistence where a target write is required. Detection, a generated draft, a task status, or a Slack post is not persistence evidence.
 
 ## What this method does not do
 
