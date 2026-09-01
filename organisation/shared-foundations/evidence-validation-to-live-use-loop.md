@@ -36,8 +36,9 @@ Observe / ingest real work
 → reconstruct what it means
 → validate with the people doing the work
 → classify the validated outputs
+→ reconcile established current findings with maintained reality
 → route each output to its correct home
-→ document stable meaning where justified
+→ persist and verify stable meaning where justified
 → implement only what the validated result requires
 → use it in real work
 → observe what breaks, varies, or changes
@@ -170,6 +171,12 @@ Do not silently treat discussion as confirmation.
 
 A validation session usually produces several different kinds of output. They do not all belong in the same document or system.
 
+Before routing an established current finding as a change, compare it with the current authoritative target through the provider-independent maintained-reality reconciliation workflow:
+
+`Dutch-Civilian-Action/dca-ai/workflows/reconcile-established-findings-into-maintained-reality.md`
+
+Classify the result as `already_represented`, `confirmation_only`, `addition`, `correction`, `qualification`, `conflict_unresolved`, `historical_only`, `proposed_future`, `alternate_destination`, or `not_ready`. Validation answers what the evidence supports; maintained-reality reconciliation answers what that support changes, where it belongs, and whether persistence was verified.
+
 | Validated output | Primary destination | Purpose |
 |---|---|---|
 | New or changed operational fact | relevant operational data / staging system | preserve current operational information and provenance |
@@ -182,7 +189,7 @@ A validation session usually produces several different kinds of output. They do
 | System, data, interface, or AI requirement | `#struct-system-build` + relevant build/pilot task | implement support justified by operational requirements |
 | Operational action | relevant operational Asana project | perform the actual work |
 | Build / validation / experiment | Structural Alignment & Pilots | track bounded system or structural validation work |
-| Current organisational evidence | DCA Operational Reality maintenance | preserve evidence about how DCA currently works |
+| Established current organisational evidence or correction | maintained-reality reconciliation → DCA Operational Reality where justified | compare with the current authoritative target, record the outcome, persist only supported change, and verify it |
 | Evidence-backed structural implication | DCA Derived Organisational Reality | preserve derived organisational findings without prematurely fixing the Operating Model |
 | Canonical person / organisation / relationship | relationship reconciliation process | promote only after identity and relationship validation |
 | Stable cross-organisational method / architecture | `dca-architecture` | version-controlled canonical meaning |
@@ -446,7 +453,12 @@ After every meaningful validation session:
 - [ ] Actual operational work routed to the operational Asana project.
 - [ ] Build/validation work routed to Structural Alignment & Pilots.
 - [ ] Relationship changes routed through reconciliation rather than direct assumption.
-- [ ] Operational Reality / Derived Organisational Reality assessed separately.
+- [ ] Operational Reality / Derived Organisational Reality / Capability Reality assessed separately.
+- [ ] Each established current candidate compared with its current authoritative target.
+- [ ] Maintained-reality reconciliation outcome recorded.
+- [ ] Required target change persisted and re-read or otherwise verified.
+- [ ] No-change confirmation thread closed; change-bearing thread closed only after verified persistence.
+- [ ] Unresolved conflict or not-ready case remains explicitly open or is transferred to a bounded validation/reconciliation item.
 - [ ] Durable operator-facing documentation updated only where meaning is sufficiently validated.
 - [ ] Next live test is explicit.
 
