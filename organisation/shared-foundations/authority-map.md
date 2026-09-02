@@ -65,6 +65,16 @@ Role: after source-first reconstruction, self-evaluation, and required validatio
 
 This workflow implements the shared method. It does not outrank the maintained target or create write authority by itself.
 
+Practical operating loop:
+
+`organisation/shared-foundations/evidence-validation-to-live-use-loop.md`
+
+Status: **CURRENT**
+
+Role: applies the method after evidence capture or validation through operator-appropriate review, the Establish task structure, classification, routing, justified implementation, live testing, and return to new evidence.
+
+Authority boundary: the loop structures work and preserves role boundaries; it does not turn a task, validation packet, publication, or technical translation into organisational truth by itself.
+
 The current questions are different:
 
 - Capability Reality: **What does this organisational capability actually do and maintain, based on evidence?**
@@ -206,7 +216,8 @@ When sources disagree, apply these rules:
 15. **System support follows the relevant requirement once that requirement is sufficiently established.**
 16. **Validation does not equal maintained-state change; compare, classify, persist, and verify the outcome.**
 17. **A completed task, generated draft, or publication is not evidence that a maintained target was updated.**
-18. **Reality authorises the model.**
+18. **Shareability does not create authority; an independently used artifact must show its status, scope, audience, source context, and material uncertainty.**
+19. **Reality authorises the model.**
 
 ## Short current authority chain
 

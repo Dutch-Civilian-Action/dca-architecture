@@ -136,10 +136,17 @@ The operational validator should be able to answer in normal working language:
 - Is this a normal case, variation, or exception?
 - Is this decision always made this way?
 - What would another person need to know to continue the work?
+- What did you do, see, decide, receive, or hand over?
+- Where is a concrete example or record, if one exists?
+- Is this yours to confirm?
 
-The validator does not need to understand the implementation schema.
+Always offer **“Not mine to confirm”** as a valid response.
+
+The validator does not need to understand the implementation schema, evidence model, reconstruction object, routing, promotion, architecture, or reconciliation mechanics. Put those mechanics in the linked System & Structure work, not in the operational validation task.
 
 During validation preserve exact corrections and operational vocabulary.
+
+When wording changes, show the revised operational wording back to the validator and ask whether it now matches the work. Do not treat an interpreted correction as final validation before that confirmation.
 
 ---
 
@@ -149,7 +156,7 @@ After each validation session produce a short bounded result under four headings
 
 ## Confirmed
 
-What the validator explicitly accepted as correct.
+What the validator explicitly accepted as correct, including **confirmed as written / no change**.
 
 ## Changed
 
@@ -287,6 +294,24 @@ Asana tracks work, not organisational truth.
 Use operational projects for actual operational work.
 
 Use Structural Alignment & Pilots for build, validation, migration, reconciliation, and learning work.
+
+When the purpose is to establish or materially re-establish shared operational reality, use one main task of type **Establish** with this default work breakdown:
+
+```text
+Establish [bounded operational reality]
+├─ A. Provide input
+├─ B. Reconstruct
+├─ C. Validate
+│  ├─ C1. Review the operational description
+│  ├─ C2. Process comments and corrections
+│  └─ C3. Reply / confirm revised wording
+├─ D. Reconcile with current maintained reality
+└─ E. Test / put in use
+```
+
+Operational people receive only the bounded input, review, confirmation, and live-use actions that belong to their work. System & Structure retains reconstruction, comment processing, reconciliation, technical lineage, and system/structure translation. The Establish task may be linked into the relevant operational project so the work is visible there without assigning technical mechanics to operational people.
+
+If a stage is genuinely unnecessary, record why rather than creating empty work. A “correct / no change” review outcome is completed validation, not a reason to invent a correction subtask.
 
 A completed Asana task means the work is recorded as completed. It does not automatically prove adoption, operational effectiveness, or organisational truth.
 
@@ -440,8 +465,13 @@ Then retest.
 After every meaningful validation session:
 
 - [ ] Source notes/transcript/evidence preserved.
+- [ ] Any independently shared artifact states what it is, its status, audience, scope, requested action, and material limitations.
+- [ ] Source references are usable by readers: name/title, container, coverage/date, what each source supports, limitations, and a stable reference where access permits.
+- [ ] Relative wording such as “former”, “earlier”, “new”, “updated”, or “remaining” names its antecedent in the artifact; unpublished drafting history is not assumed.
 - [ ] Confirmed points identified.
+- [ ] “Correct / no change” recorded as a valid result without manufacturing a correction.
 - [ ] Corrections identified and preserved as corrections.
+- [ ] Changed operational wording returned to the validator for confirmation.
 - [ ] Unresolved points kept unresolved.
 - [ ] New evidence separated from validation of earlier evidence.
 - [ ] Operational data updated only where justified.
@@ -452,12 +482,14 @@ After every meaningful validation session:
 - [ ] System/AI/data requirements routed to `#struct-system-build` and appropriate tasks.
 - [ ] Actual operational work routed to the operational Asana project.
 - [ ] Build/validation work routed to Structural Alignment & Pilots.
+- [ ] Operational validators were asked only about work they can know; System & Structure mechanics remain in a separate maintainer task or artifact.
+- [ ] “Not mine to confirm” was available where a named person may not own the point.
 - [ ] Relationship changes routed through reconciliation rather than direct assumption.
 - [ ] Operational Reality / Derived Organisational Reality / Capability Reality assessed separately.
 - [ ] Each established current candidate compared with its current authoritative target.
 - [ ] Maintained-reality reconciliation outcome recorded.
 - [ ] Required target change persisted and re-read or otherwise verified.
-- [ ] No-change confirmation thread closed; change-bearing thread closed only after verified persistence.
+- [ ] No-change confirmation thread closed only after the outcome and any target-required evidence/status write were recorded and verified; change-bearing thread closed only after verified persistence.
 - [ ] Unresolved conflict or not-ready case remains explicitly open or is transferred to a bounded validation/reconciliation item.
 - [ ] Durable operator-facing documentation updated only where meaning is sufficiently validated.
 - [ ] Next live test is explicit.
@@ -540,6 +572,10 @@ Do not:
 - treat an AI reconstruction as organisational authority;
 - overwrite earlier evidence when a correction is supplied;
 - make operators validate implementation details they do not need to understand;
+- expose reconstruction, schema, routing, promotion, architecture, or reconciliation mechanics in an operational review task;
+- assume a reader knows unpublished drafting history or describe a source as “formerly missing” without identifying the antecedent and period in the artifact;
+- cite only an internal evidence identifier where an ordinary reader needs a source name, container, coverage, support, and limitations;
+- manufacture a correction, edit, or task after a reviewer has confirmed the wording as correct;
 - use an Airtable option as proof that organisational terminology has been adopted;
 - create canonical relationships directly from a Logistics reference without reconciliation;
 - create a new document for every candidate rule;
