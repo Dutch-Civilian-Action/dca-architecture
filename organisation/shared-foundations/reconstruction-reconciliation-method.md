@@ -80,6 +80,42 @@ operational + capability sources      operational + capability activity
 
 Shared organisational information is not necessarily one database. It is reliable organisation-held information that survives source fragmentation and can be retrieved and reused by the work or capability that depends on it.
 
+## Audience and standalone-artifact contract
+
+Artifacts produced during reconstruction and reconciliation have different audiences and must not be written as though those audiences share the same process context.
+
+Before drafting or assigning an artifact, identify one primary audience:
+
+| Audience | Artifact purpose | Required language boundary |
+|---|---|---|
+| Process maintainer / System & Structure | Preserve technical lineage, object state, routing, reconciliation, persistence, and implementation detail. | Technical method language is allowed. |
+| General DCA reader | Understand an established or bounded account of organisational reality. | The artifact must stand on its own without unpublished reconstruction history. |
+| Operational validator | Confirm, correct, qualify, or decline to confirm statements about work they know. | Ask only operational questions in normal working language; keep method and system mechanics in a separate maintainer artifact or task. |
+
+Every general-reader synthesis and operational-validation artifact must open with enough visible context for independent use:
+
+- what the artifact is and why it exists;
+- its status and authority boundary;
+- its intended audience and requested action, if any;
+- the scope and relevant date or coverage period;
+- how to read or respond to it;
+- the material limitations, uncertainty, and validation state.
+
+Do not assume the reader saw earlier drafts, process notes, correction packets, or private conversations. Relative or backward-looking wording such as “former”, “earlier”, “new”, “updated”, “remaining”, “now closed”, or “this run” is usable only when the artifact itself names the antecedent, date/period, and relevant source or publication. Otherwise state the fact directly in reader-visible terms.
+
+Every shareable synthesis or validation artifact must include a human-usable source guide. For each material source or source group, provide as available:
+
+- a human-readable source name or title;
+- the account, mailbox, channel, Drive, repository, platform, or other container;
+- the relevant date, date range, or coverage period;
+- what the source supports;
+- material limitations or known gaps;
+- a stable reader-usable reference or link where access permits.
+
+An internal evidence identifier may be included as a secondary trace key. It is not a sufficient source reference for an ordinary reader by itself.
+
+An artifact that fails this contract remains a process draft. It is not ready for independent sharing, publication, or assignment to an operational validator.
+
 ## 1. Start with a bounded preservation or monitoring need
 
 Do not begin by importing or instrumenting everything because a source exists or an API is available.
@@ -102,13 +138,19 @@ Do not confuse the source with the fact or capability state it may support.
 
 Where useful, preserve:
 
+- human-readable source name or title;
 - source system or source type;
-- source reference or link;
-- source timestamp;
+- source account, container, or organisational location;
+- stable source reference or link where access permits;
+- source timestamp, date range, or coverage period;
+- what the source supports;
+- known limitations or coverage gaps;
 - raw source value where normalisation may remove meaning;
 - person or role supplying the evidence;
 - source-specific status;
 - confidence or validation state.
+
+Keep internal evidence identifiers as secondary trace keys. When a synthesis or validation artifact will be read outside the reconstruction process, render these fields as the human-usable source guide required by the audience contract.
 
 A platform field, document, commit, or system trace is not automatically the organisational truth of the same name.
 
@@ -183,6 +225,12 @@ Define what may be:
 
 Validation should be proportional to the consequence of being wrong.
 
+When the validator is an operational person, ask only about the work they can know directly: what they did, saw, decided, received, handed over, expected, or recorded; what varies; what is missing; what currently happens; and where a concrete record or example exists. Always allow the response **“Not mine to confirm.”**
+
+Do not ask an operational validator to interpret reconstruction objects, evidence-link types, schemas, routing, promotion, architecture, reconciliation mechanics, or implementation fields. System & Structure retains responsibility for those technical translations in its own artifact or task.
+
+If the validator corrects or qualifies wording, restate the changed operational wording and return it for confirmation before treating that exact wording as validated. A response equivalent to “correct” or “no change” is a complete validation result when its scope is clear; do not manufacture a correction or extra work.
+
 ## 7. Reconcile sufficiently established current findings with maintained reality
 
 Validation establishes what the evidence supports. It does not by itself establish whether the result is new, already represented, contradictory, historical only, proposed future state, or owned by another organisational destination.
@@ -212,7 +260,9 @@ Use this controlled outcome vocabulary:
 
 A routing recommendation is not write authority. The target's own identity, validation, naming, and write rules continue to apply.
 
-A source review or validation thread may close immediately when the outcome is a verified no-change result such as `already_represented` or `confirmation_only`. A change-bearing thread closes only after the supported change has been persisted and verified. A `conflict_unresolved` or `not_ready` case remains open or is transferred to an explicit validation/reconciliation item.
+A source review or validation thread may close when the outcome is a verified no-change result such as `already_represented` or `confirmation_only` and any target-required evidence/status write has also been persisted and verified. A change-bearing thread closes only after the supported change has been persisted and verified. A `conflict_unresolved` or `not_ready` case remains open or is transferred to an explicit validation/reconciliation item.
+
+A reviewer response equivalent to “correct” is recorded as validation evidence. The later maintained-target comparison independently determines whether the supported finding is already represented, confirms existing meaning, or requires an addition, correction, or qualification. Do not manufacture a change merely to produce visible activity, and do not suppress a real maintained-target change merely because the validated wording was correct.
 
 The provider-independent implementation contract is:
 
