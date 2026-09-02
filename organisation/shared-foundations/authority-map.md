@@ -140,16 +140,6 @@ Role: develops shared concepts and critical distinctions including Operational R
 
 Authority boundary: useful source material, but not yet a canonical ontology or final organisational model. It should define concepts and relationships, not compete with the current methods.
 
-## Reference-only workflow templates
-
-### `Dutch-Civilian-Action/sigproc-operational-reality`
-
-Status: **REFERENCE-ONLY / NON-AUTHORITATIVE**
-
-Role: preserves early generic reconstruction templates and historical method-development context.
-
-Authority boundary: this repository is not current DCA Operational Reality, the current Reconstruction & Reconciliation Method, or a callable DCA AI workflow. Its templates must not be used for current DCA reconstruction or operational validation. Use the current shared methods and the provider-independent workflows in `Dutch-Civilian-Action/dca-ai`.
-
 ## Superseded predecessor material
 
 ### DCA Workflow-Based Structural Alignment Logic
