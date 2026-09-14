@@ -185,7 +185,7 @@ Current Airtable and integration structures may implement parts of the current m
 Examples include:
 
 - `2 | DCA Relationships & Workflows` — current relationship, activity, intake, review, cleanup, and operational-use structures;
-- `DCA Integrations & Reconciliation` — current platform staging, sync, reconciliation, and integration-review structures.
+- `DCA Evidence & Reconciliation` — current platform staging, sync, reconciliation, and integration-review structures. Its former display name was `DCA Integrations & Reconciliation`; current stable identity and aliases are maintained in `dca-ai/context/airtable-workspace-map.md`.
 
 Their technical schemas remain implementation. Their organisational meaning must stay grounded in current requirements and evidence.
 

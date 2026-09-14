@@ -384,7 +384,9 @@ The method is implementation-independent. Current DCA systems already contain wo
 
 Current examples include organisation/contact identity, relationship records, outreach activities and cycles, contact intake, review queues, source references, validation state, cleanup logs, and consolidation markers.
 
-### `DCA Integrations & Reconciliation`
+### `DCA Evidence & Reconciliation`
+
+Former display name: `DCA Integrations & Reconciliation`. Resolve the same base through `dca-ai/context/airtable-workspace-map.md`; this name correction does not change its authority or promote staging evidence.
 
 Current examples include platform-source staging, sync-run tracking, Donorbox source records, Mailchimp source records, integration review queues, historical Reconstruction Objects, human-validation state, destination routing, maintained-reality comparison outcomes, target references/revisions, and persistence verification.
 
