@@ -55,7 +55,7 @@ The loop is continuous. A technically working implementation is not the end stat
 Evidence can come from any current operational source, for example:
 
 - Slack messages, threads, huddles, notes, transcripts, or files;
-- DCA Master Calendar events and changes to scheduled organisational events;
+- DCA Shared Calendar events and changes to scheduled organisational events;
 - Airtable records and operational changes;
 - Asana work, comments, status changes, handoffs, and completion evidence;
 - Google Workspace documents and files;
@@ -67,7 +67,7 @@ Calendar evidence has a specific boundary:
 
 **A calendar event is evidence that an occurrence was planned or scheduled. It is not by itself evidence that the event happened, that planned work was completed, or that the intended outcome occurred.**
 
-A recently passed or changed DCA Master Calendar event may therefore trigger evidence follow-up, but the actual outcome must be established from operational evidence such as participant reports, notes, Slack, Asana, Airtable, documents, or other direct records.
+A recently passed or changed DCA Shared Calendar event may therefore trigger evidence follow-up, but the actual outcome must be established from operational evidence such as participant reports, notes, Slack, Asana, Airtable, documents, or other direct records.
 
 Do not begin by asking what table, role, procedure, automation, or organisational object should exist.
 
@@ -188,7 +188,7 @@ Classify the result as `already_represented`, `confirmation_only`, `addition`, `
 |---|---|---|
 | New or changed operational fact | relevant operational data / staging system | preserve current operational information and provenance |
 | Correction to an earlier interpretation | correction path in operational data / evidence record | keep history and corrected meaning traceable |
-| Scheduled organisational occurrence | DCA Master Calendar | make shared timing and intended occurrence visible; do not treat as proof of completion |
+| Scheduled organisational occurrence | DCA Shared Calendar | make shared timing and intended occurrence visible; do not treat as proof of completion |
 | Operational terminology | `#struct-oper-standards` → durable standards/terminology document | establish shared organisational language |
 | Candidate standard or missing standard | `#struct-oper-standards` | discuss and validate minimum shared rules |
 | Validated standard | Shared Drive `00 Standards & Current Procedures` | durable operator-facing current standard |
@@ -232,9 +232,9 @@ operational evidence
 
 Slack discussion is evidence of discussion and validation. It is not by itself the durable standard.
 
-## DCA Master Calendar — shared organisational timing
+## DCA Shared Calendar — shared organisational timing
 
-The DCA Master Calendar is the shared organisational calendar for occurrences whose timing should be visible across DCA, for example:
+The DCA Shared Calendar is the shared organisational calendar for occurrences whose timing should be visible across DCA, for example:
 
 - Ukraine missions and transports;
 - warehouse, sorting, or inventory days;
@@ -267,7 +267,7 @@ actual outcome
 
 For recently passed or materially changed events, ask whether the occurrence is likely to have produced new operational evidence that should enter this loop.
 
-The DCA Master Calendar should therefore be included in recurring evidence checks alongside Slack, Asana, Airtable, Drive, meetings/transcripts, and direct operational input.
+The DCA Shared Calendar should therefore be included in recurring evidence checks alongside Slack, Asana, Airtable, Drive, meetings/transcripts, and direct operational input.
 
 ## Shared Drive — operator-facing current documentation
 
@@ -475,7 +475,7 @@ After every meaningful validation session:
 - [ ] Unresolved points kept unresolved.
 - [ ] New evidence separated from validation of earlier evidence.
 - [ ] Operational data updated only where justified.
-- [ ] New or changed scheduled organisational events reflected in DCA Master Calendar where shared timing matters.
+- [ ] New or changed scheduled organisational events reflected in DCA Shared Calendar where shared timing matters.
 - [ ] Recently passed calendar events assessed for evidence follow-up; calendar passage not treated as completion evidence.
 - [ ] Terminology routed to `#struct-oper-standards`.
 - [ ] Candidate standards routed to `#struct-oper-standards`.
