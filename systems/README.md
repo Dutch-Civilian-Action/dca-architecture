@@ -13,3 +13,7 @@ A system artifact is classified here because of what it technically defines, not
 ## Development and production
 
 - [Development, Testing and Production Promotion](./development-testing-and-promotion.md) — environment roles, representative tests, evidence handling, acceptance boundaries and controlled adoption into production.
+
+## Working research and proposals
+
+- [Identity, relationships and Airtable transition](./identity-relationships-research.md) — 16 September 2026 investigation, live inventory, responsibility proposals, contradictions, migration sequence and bounded R01 outcome. Research/proposal status; not an accepted final model or production-adoption decision. Detailed implementation and replay checks are maintained in the companion dca-ai R01 build record.
