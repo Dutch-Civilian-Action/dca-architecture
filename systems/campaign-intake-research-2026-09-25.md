@@ -63,6 +63,13 @@ Before adopting a production intake, System & Structure with fundraising, Commun
 
 **Promotion sequence:** document the boundary decision; build and inspect in Dev/Test; test cases and operator experience; check naming, descriptions, ID/display formula, links, permissions and automation effects; obtain structure and data acceptance; plan controlled production adoption and readback. Only then update the operational Airtable map, add any provider-independent intake workflow in `dca-ai`, and bind actual form/adapter automation. These are separate gates, not one launch.
 
+
+## Bounded Dev/Test build on 25 September
+
+A candidate base was created in the designated **DCA Dev/Test workspace**: `[DEV] DCA Campaign Intake — R01` (`app3iDXtg7mN2tfxz`). Its `Campaign_Requests` table (`tblHRVRABGAvUdE31`) holds provisional request purpose, work/Need, audience and ask, facts/sources, validation questions, page/route, designation questions, timing, source document, submitter, reviewer, disposition and optional operational Campaign URL. It has separate `request_status` and `factual_validation` choices, created/modified timestamps, an auto number and formula `request_id`. `Base_Guide` (`tbl1eWlhScjFkSmJa`) explains every status choice, scope, handoff and production gate. A **synthetic** `draft`/`not_reviewed` record confirmed the formula resolves to `CRQ-0001`; no H24 or other real request was copied in.
+
+This is a schema experiment, **not yet a usable intake form or a standard-compliant build**. The connected Airtable tool cannot create a form or convert the default primary `request_display` from plain text to the required `ID — name` formula. Browser access to Airtable was blocked by a saved preference in this session. There is no form link, linked production Campaign, automation, reviewer permission test or representative case replay. Complete those items and compare with the existing Campaigns draft route before any user intake or production adoption. The prototype base should not be presented to Bas as his current response destination.
+
 ## Correction from the initial experiment
 
 An earlier `Campaign Intake` table was created in `DCA - Fundraising & Impact` (`appfrCo2WDS2owEe2`), which is not the current operational destination in the workspace map. It contained one draft record. The table and record were removed on 25 September. Its old `Campaigns` table (`tbld7KLPz97ehZF7F`) still shows an empty reciprocal field `fldQyLqWgSehqnow7`, now plain text after table deletion. This inert field needs a reviewed cleanup with a dependency check; it is not part of the proposed intake. The Bas working document and H24 task links remain usable.
