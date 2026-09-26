@@ -17,3 +17,4 @@ A system artifact is classified here because of what it technically defines, not
 ## Working research and proposals
 
 - [Identity, relationships and Airtable transition](./identity-relationships-research.md) — 16 September 2026 investigation, live inventory, responsibility proposals, contradictions, migration sequence and bounded R01 outcome. Research/proposal status; not an accepted final model or production-adoption decision. Detailed implementation and replay checks are maintained in the companion dca-ai R01 build record.
+- [Campaign intake and Airtable routing](./campaign-intake-research-2026-09-25.md) — 25 September 2026 live Campaigns/form inventory, source-linked object boundaries, candidate Dev/Test request intake, tests and production decision gate. Research/proposal status; not an approved Campaign model or form route.
