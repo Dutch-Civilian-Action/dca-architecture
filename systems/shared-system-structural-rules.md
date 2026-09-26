@@ -292,7 +292,7 @@ This document is the platform-independent structural authority for shared-system
 
 Implementation documents should be separated by concern:
 
-- **Airtable Implementation Standard** — maps these rules into Airtable-specific table, field, type, formula, link, primary-field, interface, extension, and automation behaviour.
+- **[DCA Airtable Implementation Standard](https://docs.google.com/document/d/17yO7HdChXXvlxekLJjSqiHNgDWmKQm2VstpErtSJ_4c/edit?usp=drivesdk)** — maps these rules into Airtable-specific table, field, type, formula, link, primary-field, interface, extension, and automation behaviour.
 - **AI / Agent System Rules** — defines how automated agents and AI systems apply these structural rules when reading, resolving, proposing, or modifying DCA system structure.
 - **Other platform adapters** — map the same structural rules into future systems without changing the architecture itself.
 

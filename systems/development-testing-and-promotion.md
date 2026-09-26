@@ -24,6 +24,8 @@ Use development/test environments for new structures, unresolved mappings and ex
 
 The current workspace/base identities and Airtable-specific capability context are maintained in the [DCA AI workspace map](https://github.com/Dutch-Civilian-Action/dca-ai/blob/main/context/airtable-workspace-map.md). Resolve the development destination and intended production destination separately.
 
+For Airtable builds, use the current [DCA Airtable Implementation Standard](https://docs.google.com/document/d/17yO7HdChXXvlxekLJjSqiHNgDWmKQm2VstpErtSJ_4c/edit?usp=drivesdk) for implementation conventions after establishing the relevant structural and operational requirements.
+
 ## Build and test a bounded change
 
 1. State the question or change being tested, the exact environment and base/system identities, the intended production destination, and the source/version being mapped. Reuse an appropriate designated test environment after checking its contents and purpose. A similarly named or historical base is not automatically a suitable sandbox.
